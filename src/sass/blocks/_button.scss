@@ -1,0 +1,19 @@
+.btn__main {
+    height: 45px;
+    background: $main-color;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
+    padding: 12px 25px;
+    border-radius: 4px;
+    &:hover {
+        background-color: $hover-main;
+    }
+}
+.btn__second {
+    height: 45px;
+    padding: 12px 25px;
+    border-radius: 4px;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
+    &:hover {
+        background-color: $hover-second;
+    }
+}
