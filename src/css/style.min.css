@@ -360,9 +360,15 @@ template {
   font-size: 12px;
   line-height: 18px;
 }
+.title_fz14 {
+  font-size: 14px;
+}
 .title_fz16 {
   font-size: 16px;
   line-height: 24px;
+}
+.title_fz36 {
+  font-size: 36px;
 }
 .title_fz48 {
   font-size: 48px;
@@ -514,4 +520,77 @@ template {
   height: 100%;
   background-color: #fff;
   opacity: 0.75;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.about_me {
+  margin-top: 120px;
+  min-height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, minmax(100px, 240px));
+  grid-template-areas: "picture text" "picture skill";
+}
+
+#picture {
+  grid-area: picture;
+}
+
+#text {
+  grid-area: text;
+}
+
+#skill {
+  grid-area: skill;
+}
+
+.about_me_skill {
+  grid-area: skill;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.me__subtitle {
+  position: relative;
+  padding-left: 10px;
+  z-index: 2;
+}
+.me__subtitle:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -25%;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background: #FFA501;
+}
+
+.title_icon {
+  position: relative;
+  padding-left: 10px;
+  z-index: 2;
+}
+.title_icon:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 25%;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background: #FFA501;
+}
+.title_icon a {
+  position: relative;
+  top: 8px;
+  left: 12px;
 }/*# sourceMappingURL=style.min.css.map */

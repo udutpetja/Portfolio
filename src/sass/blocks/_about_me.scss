@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.about_me {
+    margin-top: 120px;
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, minmax(100px, 240px));
+    grid-template-areas: 
+    "picture text"
+    "picture skill"
+    ;
+}
+
+#picture{
+    grid-area: picture;
+}
+
+#text{
+    grid-area: text;
+}
+
+#skill{
+    grid-area: skill;
+}
+
+.about_me_skill {
+    grid-area: skill;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.me__subtitle {
+    position: relative;
+    padding-left: 10px;
+    z-index: 2;
+    @include befor_circle;
+    }
+
+.title_icon{
+    position: relative;
+    padding-left: 10px;
+    z-index: 2;
+    @include circle;
+    a{
+        position: relative;
+        top: 8px;
+        left: 12px;
+    }
+}
+
+
