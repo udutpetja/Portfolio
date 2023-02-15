@@ -309,6 +309,13 @@ template {
   margin: 0 auto;
 }
 
+.divider {
+  width: 60px;
+  height: 3px;
+  background: #FFA501;
+  margin-top: 25px;
+}
+
 .promo {
   min-height: 100vh; /*  це буде розтягувати перший слайд на весть екран  */
   position: relative;
@@ -356,12 +363,9 @@ template {
   font-size: 36px;
   line-height: 60px;
 }
-.title_fz12 {
-  font-size: 12px;
-  line-height: 18px;
-}
 .title_fz14 {
   font-size: 14px;
+  line-height: 21px;
 }
 .title_fz16 {
   font-size: 16px;
@@ -522,46 +526,35 @@ template {
   opacity: 0.75;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .about_me {
-  margin-top: 120px;
-  min-height: 600px;
+  padding-top: 120px;
+}
+.about_me .about__wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(2, minmax(100px, 240px));
-  grid-template-areas: "picture text" "picture skill";
+  grid-template-columns: 400px 670px; /* 400 this is first colum 670 second colum */
+  grid-template-rows: minmax(245px, auto) minmax(255px, auto); /* first minmax is first row second is second row */
+  grid-auto-rows: minmax(245px, auto); /* if will be more info, this is will put it correctly */
+  -moz-column-gap: 70px;
+       column-gap: 70px;
+  row-gap: 40px;
 }
-
-#picture {
-  grid-area: picture;
+.about_me .about__photo {
+  grid-row: 1/3;
 }
-
-#text {
-  grid-area: text;
+.about_me .about__photo img {
+  width: 100%;
 }
-
-#skill {
-  grid-area: skill;
+.about_me .about__description {
+  padding-top: 6px;
 }
-
-.about_me_skill {
-  grid-area: skill;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+.about_me .about__description .divider {
+  margin-top: 4px;
 }
-
-.me__subtitle {
+.about_me .about__title {
   position: relative;
-  padding-left: 10px;
-  z-index: 2;
+  padding-left: 12px;
 }
-.me__subtitle:before {
+.about_me .about__title:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -572,25 +565,46 @@ template {
   border-radius: 100%;
   background: #FFA501;
 }
-
-.title_icon {
-  position: relative;
-  padding-left: 10px;
-  z-index: 2;
+.about_me .about__text {
+  padding-top: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
 }
-.title_icon:before {
+.about_me .about__skills {
+  display: grid;
+  grid-template: repeat(2, minmax(115px, auto))/repeat(2, 260px); /* template this is one think for grid-template-columns and row */
+  grid-auto-rows: 1fr;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  row-gap: 20px;
+}
+.about_me .about__skills .about__skills-item {
+  display: grid;
+  grid-template-columns: 40px 200px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.about_me .about__skills .about__skills-circle {
+  position: relative;
+  padding: 15px 0 0 15px;
+}
+.about_me .about__skills .about__skills-circle:before {
   content: "";
   position: absolute;
   z-index: -1;
-  top: 25%;
+  top: -25%;
   left: 0;
   width: 36px;
   height: 36px;
   border-radius: 100%;
   background: #FFA501;
 }
-.title_icon a {
-  position: relative;
-  top: 8px;
-  left: 12px;
+.about_me .about__skills .about__skills-circle::before {
+  top: 0;
+}
+.about_me .about__skills .about__skills-text {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 18px;
 }/*# sourceMappingURL=style.min.css.map */
