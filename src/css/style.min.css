@@ -363,6 +363,10 @@ template {
   font-size: 36px;
   line-height: 60px;
 }
+.title_fz12 {
+  font-size: 12px;
+  line-height: 18px;
+}
 .title_fz14 {
   font-size: 14px;
   line-height: 21px;
@@ -725,4 +729,82 @@ template {
   font-size: 12px;
   line-height: 18px;
   margin-top: 4px;
+}
+
+.skills {
+  margin-top: 120px;
+}
+.skills__wrapper {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  grid-template-rows: repeat(2, auto);
+  grid-auto-rows: minmax(270px, auto);
+  -moz-column-gap: 13px;
+       column-gap: 13px;
+  row-gap: 13px;
+}
+.skills__item {
+  border: 1px solid;
+  border-color: #000;
+  padding: 30px 30px 25px 30px;
+}
+.skills__item h5 {
+  padding-top: 20px;
+  margin-bottom: 0;
+}
+.skills__item-body {
+  font-size: 12px;
+  padding-top: 15px;
+}
+.skills .skill__procent {
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: repeat(2, auto);
+  grid-auto-rows: minmax(350px, auto);
+  -moz-column-gap: 45px;
+       column-gap: 45px;
+  row-gap: 30px;
+}
+.skills .skill__procent-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.skills .skill__procent-header .title_fz14 {
+  padding-left: 13px;
+}
+.skills .skill__procent-header .title_fz14:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -25%;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background: #FFA501;
+}
+.skills .skill__procent .devider {
+  margin-top: 27px;
+  width: 350px;
+  height: 14px;
+  background: #FFA501;
+  border-radius: 4px;
+}
+.skills .skill__procent .devider__procent-two {
+  background: linear-gradient(90deg, #FFA501 85%, #E8E4DE 15%);
+}
+.skills .skill__procent .devider__procent-three {
+  background: linear-gradient(90deg, #FFA501 90%, #E8E4DE 10%);
+}
+.skills .skill__procent .devider__procent-four {
+  background: linear-gradient(90deg, #FFA501 75%, #E8E4DE 25%);
+}
+.skills .skill__procent .devider__procent-five {
+  background: linear-gradient(90deg, #FFA501 90%, #E8E4DE 10%);
+}
+.skills .skill__procent .devider__procent-six {
+  background: linear-gradient(90deg, #FFA501 95%, #E8E4DE 5%);
 }/*# sourceMappingURL=style.min.css.map */

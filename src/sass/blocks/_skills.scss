@@ -1,0 +1,67 @@
+.skills {
+    margin-top: 120px;
+    &__wrapper{
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        grid-template-rows: repeat(2, auto);
+        grid-auto-rows: minmax(270px, auto);
+        column-gap: 13px;
+        row-gap: 13px;
+
+    }
+    &__item {
+        border: 1px solid;
+        border-color: #000;
+        padding: 30px 30px 25px 30px;
+        h5 {
+            padding-top: 20px;
+            margin-bottom: 0;
+        }
+    &-body {
+        font-size: 12px;
+        padding-top: 15px;
+        }
+    }
+    .skill__procent {
+        margin-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(2, auto);
+        grid-auto-rows: minmax(350px, auto);
+        column-gap: 45px;
+        row-gap: 30px;
+        &-header {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            .title_fz14 {
+                padding-left: 13px;
+                @include befor_circle;
+            }
+        }
+        .devider {
+            margin-top: 27px;
+            width: 350px;
+            height: 14px;
+            background: $main-color;
+            border-radius: 4px;
+            &__procent-two {
+                background: linear-gradient(90deg, #FFA501 85%, #E8E4DE 15%);
+            }
+            &__procent-three {
+                background: linear-gradient(90deg, #FFA501 90%, #E8E4DE 10%);
+            }
+            &__procent-four {
+                background: linear-gradient(90deg, #FFA501 75%, #E8E4DE 25%);
+            }
+            &__procent-five {
+                background: linear-gradient(90deg, #FFA501 90%, #E8E4DE 10%);
+            }
+            &__procent-six {
+                background: linear-gradient(90deg, #FFA501 95%, #E8E4DE 5%);
+            }
+        }
+    }
+     
+}
