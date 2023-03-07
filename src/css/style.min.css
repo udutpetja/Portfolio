@@ -855,4 +855,55 @@ template {
 }
 .portfolio__item:hover {
   transform: scale(1.05);
+}
+
+.price {
+  margin-top: 120px;
+}
+.price .wrapper {
+  margin-top: 60px;
+  padding: 0 50px 0 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 366px);
+  grid-template-rows: repeat(3, auto);
+  grid-auto-rows: minmax(366px, auto);
+  justify-content: space-between;
+  row-gap: 15px;
+}
+.price .wrapper .price__item-block {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.price .wrapper .price__item-block .price__money {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+}
+.price .wrapper .price__item-block .title_fz14 {
+  margin-bottom: 0;
+}
+.price .wrapper .price__item-block .title_fz14:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -25%;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background: #FFA501;
+}
+.price .wrapper .price__item-block .title_fz14::before {
+  width: 15px;
+  height: 15px;
+  left: -25px;
+  top: 3px;
+}
+.price .wrapper .price__subtitle {
+  margin-top: 6px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000;
 }/*# sourceMappingURL=style.min.css.map */
