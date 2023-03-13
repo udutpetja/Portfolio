@@ -3,7 +3,10 @@
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
     padding: 12px 25px;
     border-radius: 4px;
+    border: 0;
     transition: 0.1s all;
+    font-size: 14px;
+    font-weight: 700;
     &_main{
         background: $main-color;
         &:hover {
