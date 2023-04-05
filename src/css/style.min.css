@@ -794,7 +794,7 @@ template {
 }
 .skills .skill__procent .devider {
   margin-top: 27px;
-  width: 350px;
+  /*     width: 350px; */
   height: 14px;
   background: #FFA501;
   border-radius: 4px;
@@ -1044,8 +1044,15 @@ template {
     -moz-column-gap: 75px;
          column-gap: 75px;
   }
+  .skills .skills__wrapper {
+    grid-template-columns: repeat(3, 270px);
+  }
+  .skills .skill__procent {
+    grid-template-columns: repeat(3, 280px);
+    grid-auto-rows: minmax(280px, auto);
+  }
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) and (max-width: 992px) {
   .container {
     max-width: 720px;
   }
@@ -1072,8 +1079,14 @@ template {
     -moz-column-gap: 55px;
          column-gap: 55px;
   }
+  .skills .skills__wrapper {
+    grid-template-columns: repeat(3, 230px);
+  }
+  .skills .skill__procent {
+    grid-template-columns: repeat(2, 330px);
+  }
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) and (max-width: 768px) {
   .container {
     max-width: 540px;
   }
@@ -1110,8 +1123,27 @@ template {
     -moz-column-gap: 45px;
          column-gap: 45px;
   }
+  .skills {
+    margin-top: 40px;
+  }
+  .skills .title_fz36 {
+    padding-top: 26px;
+    line-height: 36px;
+  }
+  .skills .skills__wrapper {
+    margin-top: 0;
+    padding: 40px 10px 0 10px;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  .skills .skill__procent {
+    margin-top: 0;
+    padding: 40px 10px 0 10px;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
 }
-@media (max-width: 576px) {
+@media (max-width: 1200px) and (max-width: 576px) {
   .container {
     width: 100%;
     padding: 0 10px;
