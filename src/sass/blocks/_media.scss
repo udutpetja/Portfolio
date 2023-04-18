@@ -32,9 +32,24 @@
         }
         .skill__procent {
             grid-template-columns: repeat(3, 280px);
-            grid-auto-rows: minmax(280px, auto);
         }
-
+    }
+    .portfolio {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-auto-rows: 280px;
+            justify-content: space-around;
+            gap: 35px;
+            .horizontal, .vertical{
+                grid-row: unset;
+                grid-column: unset;
+                img {
+                    width: 280px;
+                    height: 280px;
+                };
+             }
+         }
+    }
 }
 
 @media (max-width: 992px) {
@@ -71,6 +86,12 @@
             grid-template-columns: repeat(2, 330px);
         }
     }
+    .price {
+        .wrapper {
+            grid-template-columns: repeat(auto-fit, 300px);
+            padding: 20px;
+        }
+    }
 
 }
 
@@ -102,7 +123,7 @@
         }
     }
     .resume {
-        padding-top: 40px;
+        margin-top: 40px;
         .resume__wrapper {
             padding: 40px 15px 0 15px;
             grid-template-columns: repeat(2, 235px);
@@ -126,6 +147,20 @@
             padding: 40px 10px 0 10px;
             grid-template-columns: 1fr;
             grid-auto-rows: auto;
+        }
+    }
+    .portfolio {
+        margin-top: 40px;
+        &__wrapper {
+            margin-top: 40px;
+        }
+    }
+    .price {
+        margin-top: 40px;
+        .wrapper {
+            margin-top: 0;
+            padding: 40px 10px 0 10px;
+            justify-content: center;
         }
     }
 
@@ -164,13 +199,16 @@
         }
     }
     .resume {
-        padding-top: 40px;
+        margin-top: 40px;
         .resume__wrapper {
             padding: 35px 10px 0 10px;
             grid-template-columns: 1fr;
             row-gap: 40px;
-    
         }
     }
+    .price {
+        .wrapper {
+            grid-template-columns: 250px;
+        }
     }
 }

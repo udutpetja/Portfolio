@@ -4,9 +4,9 @@
         margin-top: 60px;
         padding: 0 50px 0 50px;
         display: grid;
-        grid-template-columns: repeat(2, 366px);
+        grid-template-columns: repeat(2, 365px);
         grid-template-rows: repeat(3, auto);
-        grid-auto-rows: minmax(366px, auto);
+        grid-auto-rows: minmax(45px, auto);
         justify-content: space-between;
         row-gap: 15px;
         .price__item-block {
