@@ -1063,6 +1063,16 @@ template {
     width: 280px;
     height: 280px;
   }
+  .contacts__wrapper {
+    padding: 0;
+    grid-template-columns: 400px 520px;
+  }
+  .contacts__description .contacts__form {
+    grid-template: 45px 190px 45px/repeat(2, 230px);
+    -moz-column-gap: 25px;
+         column-gap: 25px;
+    justify-content: start;
+  }
 }
 @media (max-width: 992px) {
   .container {
@@ -1100,6 +1110,22 @@ template {
   .price .wrapper {
     grid-template-columns: repeat(auto-fit, 300px);
     padding: 20px;
+  }
+  .contacts__wrapper {
+    grid-template-columns: 300px 380px;
+  }
+  .contacts__description .contacts__form {
+    grid-template: 45px 190px 45px/repeat(2, 175px);
+    -moz-column-gap: 25px;
+         column-gap: 25px;
+    justify-content: start;
+  }
+  .contacts__description .contacts__form .contacts__triggers {
+    -moz-column-gap: 14px;
+         column-gap: 14px;
+  }
+  .contacts__description .contacts__form .contacts__triggers button {
+    padding: 2px 14px;
   }
 }
 @media (max-width: 768px) {
@@ -1172,6 +1198,23 @@ template {
     padding: 40px 10px 0 10px;
     justify-content: center;
   }
+  .contacts {
+    margin: 40px 0 60px 0;
+  }
+  .contacts__wrapper {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .contacts__wrapper .contacts__photo {
+    display: none;
+  }
+  .contacts__wrapper .contacts__form {
+    grid-template: 45px 120px 45px/repeat(2, 215px);
+  }
+  .contacts__wrapper .contacts__form .contacts__triggers {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
 }
 @media (max-width: 576px) {
   .container {
@@ -1213,5 +1256,22 @@ template {
   }
   .price .wrapper {
     grid-template-columns: 250px;
+  }
+  .contacts {
+    margin-bottom: 40px;
+  }
+  .contacts .contacts__form {
+    grid-template: 45px 45px 190px minmax(45px, auto)/1fr;
+  }
+  .contacts .contacts__form .contacts__textarea {
+    grid-column: unset;
+    width: 100%;
+  }
+  .contacts .contacts__form .contacts__triggers {
+    grid-column: unset;
+    grid-template-columns: 1fr;
+    -moz-column-gap: unset;
+         column-gap: unset;
+    row-gap: 20px;
   }
 }/*# sourceMappingURL=style.min.css.map */
